@@ -73,7 +73,7 @@
       <div class="container flex flex-col items-center">
         <p class="eyebrow eyebrow--light mb-sm">Collaborate</p>
         <h2 style="color: var(--c-white);">Your project<br />could be next.</h2>
-        <a href="mailto:info@ptcad.co.id" class="btn btn--white mt-lg">Start a Conversation</a>
+        <a href="https://wa.me/6285102801168" class="btn btn--white mt-lg" target="_blank" rel="noopener">Start a Conversation</a>
       </div>
     </section>
 

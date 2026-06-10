@@ -29,7 +29,7 @@
         <p class="eyebrow eyebrow--light mb-sm">Contact</p>
         <p class="footer__contact-line">Jakarta, Indonesia</p>
         <p class="footer__contact-line mt-xs">
-          <a href="mailto:info@ptcad.co.id" class="footer__link">info@ptcad.co.id</a>
+          <a href="https://wa.me/6285102801168" class="footer__link" target="_blank" rel="noopener">WhatsApp</a>
         </p>
       </div>
     </div>

@@ -101,7 +101,7 @@
       <div class="container flex flex-col items-center">
         <p class="eyebrow eyebrow--light mb-sm">Work With Us</p>
         <h2 style="color: var(--c-white);">Let's build<br />something great.</h2>
-        <a href="mailto:info@ptcad.co.id" class="btn btn--white mt-lg">Get in Touch</a>
+        <a href="https://wa.me/6285102801168" class="btn btn--white mt-lg" target="_blank" rel="noopener">Get in Touch</a>
       </div>
     </section>
 
