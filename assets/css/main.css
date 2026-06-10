@@ -1,0 +1,221 @@
+/* ============================================================
+   DESIGN SYSTEM — PT CIPTA ANANTA DHARMA
+   Swiss International Typographic Style
+   ============================================================ */
+
+:root {
+  --c-primary:       #0F4C75;
+  --c-primary-dark:  #0A3352;
+  --c-primary-mid:   #1A6BA0;
+  --c-primary-light: #4A90B8;
+  --c-primary-pale:  #C9DFF0;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F4F7FA;
+  --c-light:         #E2EBF2;
+  --c-mid:           #8FA3B8;
+  --c-dark:          #0D1B2A;
+  --c-text:          #0D1B2A;
+  --c-text-2:        #4A6177;
+
+  --font-head: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --header-h: 72px;
+  --max-w:    1280px;
+  --gutter:   clamp(1.25rem, 4vw, 2.5rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:  cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--c-text);
+  background: var(--c-white);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg, video { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+ul, ol { list-style: none; }
+
+/* ── Typography ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: clamp(2.8rem, 8vw, 7.5rem); }
+h2 { font-size: clamp(2rem, 5vw, 4.25rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 2.25rem); }
+h4 { font-size: 1.25rem; font-weight: 600; }
+
+p { max-width: 64ch; }
+
+.eyebrow {
+  font-family: var(--font-head);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+}
+
+.eyebrow--light { color: var(--c-primary-pale); }
+
+/* ── Layout ─────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section { padding: 6rem 0; }
+.section--sm { padding: 4rem 0; }
+.section--lg { padding: 8rem 0; }
+
+.section--dark  { background: var(--c-dark);  color: var(--c-white); }
+.section--blue  { background: var(--c-primary); color: var(--c-white); }
+.section--light { background: var(--c-off-white); }
+
+/* ── Dot grid background ─────────────────────────────────── */
+.dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.9) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at center,
+    rgba(0,0,0,0.02) 0%,
+    rgba(0,0,0,0.08) 30%,
+    rgba(0,0,0,0.45) 60%,
+    rgba(0,0,0,0.88) 82%,
+    rgba(0,0,0,1)    100%
+  );
+  -webkit-mask-image: radial-gradient(ellipse at center,
+    rgba(0,0,0,0.02) 0%,
+    rgba(0,0,0,0.08) 30%,
+    rgba(0,0,0,0.45) 60%,
+    rgba(0,0,0,0.88) 82%,
+    rgba(0,0,0,1)    100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Swiss rule line */
+.rule {
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.15;
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gutter); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gutter); }
+
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-head);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border: 1.5px solid currentColor;
+  background: transparent;
+  color: var(--c-primary);
+  transition: background 0.22s var(--ease-out), color 0.22s var(--ease-out);
+}
+.btn:hover { background: var(--c-primary); color: var(--c-white); }
+
+.btn--solid {
+  background: var(--c-primary);
+  color: var(--c-white);
+  border-color: var(--c-primary);
+}
+.btn--solid:hover { background: var(--c-primary-dark); border-color: var(--c-primary-dark); }
+
+.btn--white { border-color: var(--c-white); color: var(--c-white); }
+.btn--white:hover { background: var(--c-white); color: var(--c-primary); }
+
+/* ── Swiss number marker ─────────────────────────────────────── */
+.num-marker {
+  font-family: var(--font-head);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--c-mid);
+}
+
+/* ── Utilities ───────────────────────────────────────────────── */
+.flex        { display: flex; }
+.flex-col    { display: flex; flex-direction: column; }
+.items-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-sm      { gap: 0.75rem; }
+.gap-md      { gap: 1.5rem; }
+.gap-lg      { gap: 3rem; }
+
+.mt-xs { margin-top: 0.5rem; }
+.mt-sm { margin-top: 1rem; }
+.mt-md { margin-top: 2rem; }
+.mt-lg { margin-top: 3.5rem; }
+.mb-xs { margin-bottom: 0.5rem; }
+.mb-sm { margin-bottom: 1rem; }
+.mb-md { margin-bottom: 2rem; }
+
+.text-muted { color: var(--c-text-2); }
+.text-white { color: var(--c-white); }
+.text-center { text-align: center; }
+
+/* ── Scroll reveal base ──────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Mobile global overrides ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .section    { padding: 4rem 0; }
+  .section--sm { padding: 2.5rem 0; }
+  .section--lg { padding: 5rem 0; }
+  .mt-lg { margin-top: 2rem; }
+  .gap-lg { gap: 2rem; }
+
+  h2 { font-size: clamp(1.75rem, 6vw, 4.25rem); }
+  h3 { font-size: clamp(1.1rem, 3.5vw, 2.25rem); }
+
+  .btn { padding: 0.85rem 1.5rem; font-size: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .section    { padding: 3rem 0; }
+  .section--lg { padding: 4rem 0; }
+}

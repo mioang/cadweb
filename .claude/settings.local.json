@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "Bash(Copy-Item \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\Logo PT CAD \\(No Text\\)\\(SVG\\).svg\" \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\public\\\\logo.svg\")",
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\Logo PT CAD \\(No Text\\)\\(SVG\\).svg\" \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\public\\\\logo.svg\" -Force)",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\public\")",
+      "Bash(npx nuxi *)",
+      "Bash(node -e \"const fs = require\\('fs'\\); const pkg = JSON.parse\\(fs.readFileSync\\('package.json','utf8'\\)\\); console.log\\(pkg.dependencies?.nuxt || pkg.devDependencies?.nuxt\\)\")",
+      "Bash(Remove-Item -Recurse -Force \"C:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\node_modules\\\\.vite\" -ErrorAction SilentlyContinue)",
+      "Bash(Write-Host \"Vite cache cleared\")",
+      "Bash(npm run *)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 3000 -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3001/\" -UseBasicParsing -TimeoutSec 10; Write-Output \"Status: $\\($r.StatusCode\\)\"; $r.Content.Substring\\(0, [Math]::Min\\(2000, $r.Content.Length\\)\\) } catch { Write-Output \"Error: $_\" })",
+      "PowerShell(Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue)",
+      "Bash(ls \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\\\\Website\\\\public\" && ls \"c:\\\\Users\\\\komio\\\\OneDrive\\\\Documents\\\\Work\\\\Structural Consultant\\\\Brand Identity\")",
+      "Read(//c/Users/komio/OneDrive/Documents/Work/Structural Consultant/Brand Identity/**)",
+      "Bash(gh auth *)",
+      "PowerShell(gh auth status 2>&1)"
+    ]
+  }
+}

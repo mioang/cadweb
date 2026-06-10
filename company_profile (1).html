@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║  LOGO PLACEHOLDER INSTRUCTIONS                       ║
+  ║  All logo instances use: <img src="logo.svg" .../>   ║
+  ║  Place your Logo_PT_CAD.svg in the same folder       ║
+  ║  as this HTML file and rename it to: logo.svg        ║
+  ║  The logo will appear automatically in all pages.    ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Company Profile — PT Cipta Ananta Dharma Engineering Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0F4C75;
+  --navy-dark: #0F4C75;
+  --navy-mid: #1A6EA8;
+  --navy-light: #D6E8F5;
+  --gold: #C9A84C;
+  --white: #FFFFFF;
+  --off-white: #F7F5F0;
+  --text: #1A1A1A;
+  --text-mid: #4A4A4A;
+  --text-light: #888888;
+  --border: rgba(15,76,117,0.12);
+  --page-w: 210mm;
+  --page-h: 297mm;
+}
+
+html { font-size: 10pt; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #CBD5DF;
+  color: var(--text);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ═══════════════════════════════════════
+   PAGE SETUP
+═══════════════════════════════════════ */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  background: var(--white);
+  margin: 0 auto 12mm;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media print {
+  body { background: white; }
+  .page {
+    margin: 0;
+    page-break-after: always;
+    box-shadow: none;
+  }
+  @page { size: A4; margin: 0; }
+}
+
+@media screen {
+  .page { box-shadow: 0 8px 40px rgba(0,0,0,0.22); }
+  body { padding: 10mm 0 20mm; }
+}
+
+/* ═══════════════════════════════════════
+   SVG ICON (inline reusable)
+═══════════════════════════════════════ */
+.cad-icon-navy { /* rendered inline via SVG use */ }
+
+/* ═══════════════════════════════════════
+   PAGE 1 — COVER
+═══════════════════════════════════════ */
+.cover {
+  background: var(--navy-dark);
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+}
+
+.cover-top {
+  padding: 18mm 16mm 0;
+  position: relative;
+  z-index: 2;
+}
+
+.cover-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+}
+
+.cover-firm-name {
+  font-size: 11pt;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.cover-firm-sub {
+  font-size: 8.5pt;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.03em;
+}
+
+.cover-center {
+  position: relative;
+  z-index: 2;
+  padding: 0 16mm;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover-eyebrow {
+  font-size: 7.5pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 5mm;
+  font-weight: 500;
+}
+
+.cover-title {
+  font-size: 32pt;
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 6mm;
+}
+
+.cover-title span {
+  color: var(--gold);
+}
+
+.cover-desc {
+  font-size: 10pt;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  max-width: 120mm;
+  font-weight: 300;
+}
+
+.cover-bottom {
+  position: relative;
+  z-index: 2;
+  padding: 8mm 16mm;
+  border-top: 0.3mm solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover-bottom-text {
+  font-size: 7pt;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cover-year {
+  font-size: 7pt;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.1em;
+}
+
+.cover-accent-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2mm;
+  background: var(--gold);
+  z-index: 3;
+}
+
+/* ═══════════════════════════════════════
+   PAGE HEADER (inner pages)
+═══════════════════════════════════════ */
+.page-header {
+  height: 18mm;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16mm;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1.5mm;
+  background: var(--gold);
+}
+
+.page-header-left {
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+}
+
+.page-header-firm {
+  font-size: 8pt;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.page-header-sub {
+  font-size: 6.5pt;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+}
+
+.page-header-title {
+  font-size: 7.5pt;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════════════
+   PAGE FOOTER
+═══════════════════════════════════════ */
+.page-footer {
+  height: 12mm;
+  border-top: 0.2mm solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16mm;
+  flex-shrink: 0;
+}
+
+.page-footer-text {
+  font-size: 6.5pt;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+.page-num {
+  font-size: 7pt;
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════
+   PAGE CONTENT AREA
+═══════════════════════════════════════ */
+.page-body {
+  flex: 1;
+  padding: 12mm 16mm 8mm;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-eyebrow {
+  font-size: 7pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 3mm;
+}
+
+.section-title {
+  font-size: 20pt;
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 6mm;
+}
+
+.section-title span { color: var(--navy); }
+
+.body-text {
+  font-size: 9.5pt;
+  color: var(--text-mid);
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.body-text + .body-text { margin-top: 4mm; }
+
+.h-rule {
+  height: 0.3mm;
+  background: var(--border);
+  margin: 6mm 0;
+}
+
+.h-rule-navy {
+  height: 0.5mm;
+  background: var(--navy);
+  width: 12mm;
+  margin: 4mm 0 6mm;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 2 — ABOUT US
+═══════════════════════════════════════ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8mm;
+  margin-top: 6mm;
+}
+
+.about-card {
+  background: var(--off-white);
+  border-radius: 3mm;
+  padding: 6mm;
+  border-left: 1mm solid var(--navy);
+}
+
+.about-card-title {
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2.5mm;
+}
+
+.about-card-text {
+  font-size: 8.5pt;
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+.logo-story-box {
+  margin-top: 6mm;
+  background: var(--navy-dark);
+  border-radius: 3mm;
+  padding: 6mm 8mm;
+  display: flex;
+  align-items: center;
+  gap: 8mm;
+}
+
+.logo-story-text {
+  flex: 1;
+}
+
+.logo-story-title {
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2.5mm;
+}
+
+.logo-story-body {
+  font-size: 8.5pt;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 3 — WHY US
+═══════════════════════════════════════ */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+  margin-top: 6mm;
+  flex: 1;
+}
+
+.why-card {
+  background: var(--off-white);
+  border-radius: 3mm;
+  padding: 6mm;
+  display: flex;
+  flex-direction: column;
+  gap: 3mm;
+  border-top: 0.8mm solid var(--navy);
+}
+
+.why-num {
+  font-size: 22pt;
+  font-weight: 800;
+  color: var(--navy);
+  opacity: 0.15;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.why-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--navy-dark);
+  line-height: 1.3;
+}
+
+.why-text {
+  font-size: 8.5pt;
+  color: var(--text-mid);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.stats-row {
+  display: flex;
+  gap: 0;
+  margin-top: 6mm;
+  border: 0.2mm solid var(--border);
+  border-radius: 3mm;
+  overflow: hidden;
+}
+
+.stat-box {
+  flex: 1;
+  padding: 5mm 6mm;
+  text-align: center;
+  border-right: 0.2mm solid var(--border);
+}
+
+.stat-box:last-child { border-right: none; }
+
+.stat-num {
+  font-size: 18pt;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 7pt;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 1.5mm;
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 4 — SERVICES
+═══════════════════════════════════════ */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+  margin-top: 6mm;
+  flex: 1;
+}
+
+.service-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 5mm;
+  padding: 5mm 6mm;
+  background: var(--off-white);
+  border-radius: 3mm;
+}
+
+.service-num {
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--navy);
+  opacity: 0.4;
+  font-family: monospace;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  padding-top: 0.5mm;
+}
+
+.service-content {}
+
+.service-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 1.5mm;
+}
+
+.service-text {
+  font-size: 8.5pt;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2mm;
+  margin-top: 2.5mm;
+}
+
+.tag {
+  font-size: 6.5pt;
+  color: var(--navy);
+  background: var(--navy-light);
+  padding: 0.8mm 2.5mm;
+  border-radius: 1mm;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 5 — PROCESS
+═══════════════════════════════════════ */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 6mm;
+  flex: 1;
+}
+
+.process-step {
+  display: flex;
+  gap: 6mm;
+  padding: 5mm 0;
+  border-bottom: 0.2mm solid var(--border);
+  position: relative;
+}
+
+.process-step:last-child { border-bottom: none; }
+
+.step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 10mm;
+}
+
+.step-circle {
+  width: 8mm;
+  height: 8mm;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7pt;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.step-line {
+  width: 0.3mm;
+  flex: 1;
+  background: var(--border);
+  margin-top: 2mm;
+}
+
+.step-content { flex: 1; padding-top: 0.5mm; }
+
+.step-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 1.5mm;
+}
+
+.step-text {
+  font-size: 8.5pt;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.step-duration {
+  font-size: 6.5pt;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 1.5mm;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 6 — PROJECTS
+═══════════════════════════════════════ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+  margin-top: 6mm;
+  flex: 1;
+}
+
+.project-card {
+  border-radius: 3mm;
+  overflow: hidden;
+  border: 0.2mm solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img {
+  height: 35mm;
+  background: var(--navy-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2mm;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  opacity: 0.08;
+}
+
+.project-img-label {
+  font-size: 6.5pt;
+  color: var(--navy);
+  opacity: 0.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: monospace;
+  position: relative;
+  z-index: 1;
+}
+
+.project-img-icon {
+  position: relative;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.project-info {
+  padding: 4mm 5mm;
+  flex: 1;
+  background: white;
+}
+
+.project-type {
+  font-size: 6.5pt;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5mm;
+}
+
+.project-name {
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--navy-dark);
+  line-height: 1.3;
+  margin-bottom: 2mm;
+}
+
+.project-desc {
+  font-size: 7.5pt;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.project-meta {
+  display: flex;
+  gap: 3mm;
+  margin-top: 2.5mm;
+  flex-wrap: wrap;
+}
+
+.project-meta-item {
+  font-size: 6.5pt;
+  color: var(--text-light);
+  font-family: monospace;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 7 — TEAM
+═══════════════════════════════════════ */
+.team-principal {
+  display: flex;
+  gap: 8mm;
+  margin-top: 6mm;
+  padding: 6mm;
+  background: var(--off-white);
+  border-radius: 3mm;
+  border-left: 1mm solid var(--navy);
+}
+
+.team-photo {
+  width: 32mm;
+  height: 32mm;
+  border-radius: 2mm;
+  background: var(--navy-light);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-photo-label {
+  font-size: 6pt;
+  color: var(--navy);
+  opacity: 0.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.team-info { flex: 1; }
+
+.team-name {
+  font-size: 13pt;
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.01em;
+  margin-bottom: 1mm;
+}
+
+.team-title {
+  font-size: 7.5pt;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 3mm;
+}
+
+.team-bio {
+  font-size: 8.5pt;
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+.team-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2mm;
+  margin-top: 3mm;
+}
+
+.credential {
+  font-size: 6.5pt;
+  color: var(--navy);
+  background: var(--navy-light);
+  padding: 0.8mm 2.5mm;
+  border-radius: 1mm;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4mm;
+  margin-top: 5mm;
+}
+
+.team-member {
+  border: 0.2mm solid var(--border);
+  border-radius: 3mm;
+  overflow: hidden;
+  text-align: center;
+}
+
+.team-member-photo {
+  height: 24mm;
+  background: var(--navy-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-member-photo-label {
+  font-size: 5.5pt;
+  color: var(--navy);
+  opacity: 0.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.team-member-info {
+  padding: 3mm 4mm;
+}
+
+.team-member-name {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 1mm;
+}
+
+.team-member-role {
+  font-size: 7pt;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+}
+
+.expertise-row {
+  display: flex;
+  gap: 3mm;
+  margin-top: 5mm;
+}
+
+.expertise-item {
+  flex: 1;
+  text-align: center;
+  padding: 4mm 3mm;
+  background: var(--off-white);
+  border-radius: 3mm;
+  border-top: 0.8mm solid var(--navy);
+}
+
+.expertise-label {
+  font-size: 7pt;
+  font-weight: 600;
+  color: var(--navy-dark);
+  line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 8 — CONTACT / BACK COVER
+═══════════════════════════════════════ */
+.contact-page {
+  background: var(--navy-dark);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.contact-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+}
+
+.contact-top {
+  padding: 14mm 16mm 10mm;
+  border-bottom: 0.3mm solid rgba(255,255,255,0.08);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+}
+
+.contact-top-text {}
+
+.contact-page-eyebrow {
+  font-size: 7pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2mm;
+  font-weight: 600;
+}
+
+.contact-page-title {
+  font-size: 22pt;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.contact-body {
+  flex: 1;
+  padding: 10mm 16mm;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8mm;
+  align-content: start;
+}
+
+.contact-block-title {
+  font-size: 7pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4mm;
+  font-weight: 600;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.5mm;
+  margin-bottom: 3.5mm;
+}
+
+.contact-detail-label {
+  font-size: 7pt;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  width: 14mm;
+  flex-shrink: 0;
+  padding-top: 0.3mm;
+  font-weight: 500;
+}
+
+.contact-detail-value {
+  font-size: 9pt;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.contact-map-placeholder {
+  background: rgba(255,255,255,0.04);
+  border: 0.3mm solid rgba(255,255,255,0.08);
+  border-radius: 3mm;
+  height: 40mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2mm;
+}
+
+.contact-map-label {
+  font-size: 7pt;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.contact-bottom {
+  padding: 7mm 16mm;
+  border-top: 0.3mm solid rgba(255,255,255,0.08);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-bottom-firm {
+  font-size: 8pt;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.01em;
+}
+
+.contact-bottom-sub {
+  font-size: 6.5pt;
+  color: rgba(255,255,255,0.4);
+  margin-top: 0.5mm;
+}
+
+.contact-tagline {
+  font-size: 7.5pt;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.contact-gold-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2mm;
+  background: var(--gold);
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════ SHARED SVG DEFS ════════════ -->
+<svg width="0" height="0" style="position:absolute;overflow:hidden">
+  <defs>
+    <symbol id="icon-navy" viewBox="0 0 64 64">
+      
+      <rect x="26" y="26" width="12" height="12" fill="white"/>
+      <rect x="27.5" y="14" width="9" height="9" fill="white"/>
+      <rect x="27.5" y="41" width="9" height="9" fill="white"/>
+      <rect x="14" y="27.5" width="9" height="9" fill="white"/>
+      <rect x="41" y="27.5" width="9" height="9" fill="white"/>
+      <rect x="18.5" y="18.5" width="7" height="7" fill="white" transform="rotate(45 22 22)"/>
+      <rect x="38.5" y="18.5" width="7" height="7" fill="white" transform="rotate(45 42 22)"/>
+      <rect x="18.5" y="38.5" width="7" height="7" fill="white" transform="rotate(45 22 42)"/>
+      <rect x="38.5" y="38.5" width="7" height="7" fill="white" transform="rotate(45 42 42)"/>
+    </symbol>
+    <symbol id="icon-white" viewBox="0 0 64 64">
+      <rect x="26" y="26" width="12" height="12" fill="white"/>
+      <rect x="27.5" y="14" width="9" height="9" fill="white"/>
+      <rect x="27.5" y="41" width="9" height="9" fill="white"/>
+      <rect x="14" y="27.5" width="9" height="9" fill="white"/>
+      <rect x="41" y="27.5" width="9" height="9" fill="white"/>
+      <rect x="18.5" y="18.5" width="7" height="7" fill="white" transform="rotate(45 22 22)"/>
+      <rect x="38.5" y="18.5" width="7" height="7" fill="white" transform="rotate(45 42 22)"/>
+      <rect x="18.5" y="38.5" width="7" height="7" fill="white" transform="rotate(45 22 42)"/>
+      <rect x="38.5" y="38.5" width="7" height="7" fill="white" transform="rotate(45 42 42)"/>
+    </symbol>
+    <pattern id="dot-pat" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="4.5" y="4.5" width="3" height="3" fill="white" transform="rotate(45 6 6)"/>
+    </pattern>
+    <pattern id="dot-pat-navy" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="4.5" y="4.5" width="3" height="3" fill="#0F4C75" transform="rotate(45 6 6)"/>
+    </pattern>
+  </defs>
+</svg>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 1 — COVER
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="cover">
+    <svg class="cover-bg-pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+      <rect width="100%" height="100%" fill="url(#dot-pat)"/>
+    </svg>
+
+    <div class="cover-top">
+      <div class="cover-logo-row">
+        <img src="logo.svg" width="38" height="38" alt="CAD Logo"/>
+        <div>
+          <div class="cover-firm-name">Cipta Ananta Dharma</div>
+          <div class="cover-firm-sub">Engineering Services</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-center">
+      <div class="cover-eyebrow">Company Profile · 2025</div>
+      <div class="cover-title">Building<br/>Structural<br/><span>Excellence.</span></div>
+      <div class="cover-desc">Precision structural engineering solutions for developers, architects, and contractors across Indonesia. From concept to construction — engineered to last.</div>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-bottom-text">PT Cipta Ananta Dharma Engineering Services</div>
+      <div class="cover-year">Jakarta · Indonesia</div>
+    </div>
+
+    <div class="cover-accent-bar"></div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 2 — ABOUT US
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <img src="logo.svg" width="22" height="22" alt="CAD Logo"/>
+      <div>
+        <div class="page-header-firm">Cipta Ananta Dharma</div>
+        <div class="page-header-sub">Engineering Services</div>
+      </div>
+    </div>
+    <div class="page-header-title">About Us</div>
+  </div>
+
+  <div class="page-body">
+    <div class="section-eyebrow">Who We Are</div>
+    <div class="section-title">Built on precision.<br/><span>Driven by integrity.</span></div>
+
+    <p class="body-text">PT Cipta Ananta Dharma Engineering Services is a structural engineering consultancy based in Jakarta, Indonesia. We provide end-to-end structural design and analysis services to property developers, architects, and contractors across residential, commercial, and mixed-use projects.</p>
+
+    <p class="body-text">Founded on the belief that engineering excellence and professional service are inseparable, we combine rigorous technical analysis with transparency — ensuring every client understands the engineering behind their project.</p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-title">Our Vision</div>
+        <div class="about-card-text">To be the most trusted structural engineering partner for developers,contractors and architects in Indonesia — recognised for precision, reliability, and technical depth.</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-title">Our Mission</div>
+        <div class="about-card-text">To deliver structurally sound, code-compliant, and cost-effective engineering solutions that give our clients confidence and assurance at every stage of their project.</div>
+      </div>
+    </div>
+
+    <div class="logo-story-box">
+      <img src="logo.svg" width="48" height="48" alt="CAD Logo"/>
+      <div class="logo-story-text">
+        <div class="logo-story-title">The Story Behind Our Mark</div>
+        <div class="logo-story-body">Our logo encodes three layers of meaning: the Dharmachakra's 8 spokes represent our pathways of service; the belt-outrigger structural system reflects our core technical competency; the square are halved every step but half will never reach zero in infinite series.This represents our limitless potential.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">PT Cipta Ananta Dharma Engineering Services · Confidential</div>
+    <div class="page-num">02 / 08</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 3 — WHY US
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <img src="logo.svg" width="22" height="22" alt="CAD Logo"/>
+      <div>
+        <div class="page-header-firm">Cipta Ananta Dharma</div>
+        <div class="page-header-sub">Engineering Services</div>
+      </div>
+    </div>
+    <div class="page-header-title">Why Choose Us</div>
+  </div>
+
+  <div class="page-body">
+    <div class="section-eyebrow">Our Advantage</div>
+    <div class="section-title">Why clients choose<br/><span>CAD Engineering.</span></div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-title">Code-Compliant by Default</div>
+        <div class="why-text">Every design is checked against SNI 2847:2019, AISC 360-22, and ACI 318-19. We ensure a code compliant design before submission.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-title">Advanced Analysis Tools</div>
+        <div class="why-text">We use advanced structural analysis software and finite element modelling, delivering precise results and clear output reports that architects and developers can act on with confidence.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-title">Professional Documentation</div>
+        <div class="why-text">Calculation reports include full step-by-step workings, utilisation ratios, and code references, all provided with transparency in mind.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-title">Responsive & Reliable</div>
+        <div class="why-text">We understand project timelines. Clear communication, realistic schedules, and proactive updates mean you're never waiting or wondering where things stand.</div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">30</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">In-House Delivery</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Code Compliance</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">PT Cipta Ananta Dharma Engineering Services · Confidential</div>
+    <div class="page-num">03 / 08</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 4 — SERVICES
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <img src="logo.svg" width="22" height="22" alt="CAD Logo"/>
+      <div>
+        <div class="page-header-firm">Cipta Ananta Dharma</div>
+        <div class="page-header-sub">Engineering Services</div>
+      </div>
+    </div>
+    <div class="page-header-title">Our Services</div>
+  </div>
+
+  <div class="page-body">
+    <div class="section-eyebrow">What We Offer</div>
+    <div class="section-title">Structural engineering<br/><span>from brief to stamp.</span></div>
+
+    <div class="services-list">
+      <div class="service-row">
+        <div class="service-num">01</div>
+        <div class="service-content">
+          <div class="service-title">Structural Design & Analysis</div>
+          <div class="service-text">Full structural system design for residential, commercial, and mixed-use buildings. Includes beam, column, slab, and foundation design with complete calculation documentation.</div>
+          <div class="service-tags">
+            <span class="tag">Reinforced Concrete</span>
+            <span class="tag">Steel Structure</span>
+            <span class="tag">Foundation Design</span>
+            <span class="tag">Seismic Design</span>
+            <span class="tag">Composite Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">02</div>
+        <div class="service-content">
+          <div class="service-title">Finite Element Modelling & Analysis</div>
+          <div class="service-text">3D finite element modelling and structural analysis using industry-leading software. Includes seismic analysis, load combinations, and post-processing of results into clear engineering reports.</div>
+          <div class="service-tags">
+            <span class="tag">Finite Element Modelling</span>
+            <span class="tag">Seismic Analysis</span>
+            <span class="tag">Dynamic Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">03</div>
+        <div class="service-content">
+          <div class="service-title">Structural Peer Review</div>
+          <div class="service-text">Independent review of existing structural designs and calculations. Identifies non-compliant members, errors, and optimisation opportunities before construction.</div>
+          <div class="service-tags">
+            <span class="tag">QA / QC</span>
+            <span class="tag">Code Checking</span>
+            <span class="tag">Design Review</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">04</div>
+        <div class="service-content">
+          <div class="service-title">Technical Documentation & Reporting</div>
+          <div class="service-text">Professional calculation reports, structural drawing coordination, and permit documentation. All outputs are formatted for client review, peer check, and authority submission.</div>
+          <div class="service-tags">
+            <span class="tag">Calculation Reports</span>
+            <span class="tag">Drawing Coordination</span>
+            <span class="tag">Permit Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">05</div>
+        <div class="service-content">
+          <div class="service-title">Forensic Engineering</div>
+          <div class="service-text">Investigation of structural defects, and failures in existing buildings. We assess root causes, evaluate structural integrity, and provide rehabilitation recommendations to restore safety and performance.</div>
+          <div class="service-tags">
+            <span class="tag">Failure Analysis</span>
+            <span class="tag">Structural Assessment</span>
+            <span class="tag">Building Rehabilitation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">PT Cipta Ananta Dharma Engineering Services · Confidential</div>
+    <div class="page-num">04 / 08</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 5 — PROCESS
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <img src="logo.svg" width="22" height="22" alt="CAD Logo"/>
+      <div>
+        <div class="page-header-firm">Cipta Ananta Dharma</div>
+        <div class="page-header-sub">Engineering Services</div>
+      </div>
+    </div>
+    <div class="page-header-title">Our Process</div>
+  </div>
+
+  <div class="page-body">
+    <div class="section-eyebrow">How We Work</div>
+    <div class="section-title">A structured approach<br/><span>at every stage.</span></div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-left">
+          <div class="step-circle">01</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Brief & Scope</div>
+          <div class="step-text">We begin with a detailed review of architectural drawings, project brief, and client requirements. Scope, timeline, and fee are agreed before any technical work begins.</div>
+          <div class="step-duration">Week 1</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-left">
+          <div class="step-circle">02</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Preliminary Structural System</div>
+          <div class="step-text">Concept-level structural system selection — framing, foundation type, and key member sizing. Issued for architect coordination and client review before detailed design commences.</div>
+          <div class="step-duration">Weeks 1–2</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-left">
+          <div class="step-circle">03</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Detailed Design & Finite Element Modelling</div>
+          <div class="step-text">Full 3D finite element model built using structural analysis software. Seismic analysis, load combinations, and member design performed to SNI/ACI/AISC standards. Internal QA check before issue.</div>
+          <div class="step-duration">Weeks 2–5</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-left">
+          <div class="step-circle">04</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Calculation Report & Drawing Issue</div>
+          <div class="step-text">Professional calculation report with step-by-step workings issued alongside structural drawings. All outputs formatted for client review, peer check, and permit submission.</div>
+          <div class="step-duration">Week 5–6</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-left">
+          <div class="step-circle">05</div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Construction Support & RFI Response</div>
+          <div class="step-text">Ongoing support during construction — responding to site RFIs, reviewing shop drawings, and issuing design revisions as required. We stay available until the structure is built.</div>
+          <div class="step-duration">Construction Phase</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">PT Cipta Ananta Dharma Engineering Services · Confidential</div>
+    <div class="page-num">05 / 08</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 6 — PROJECTS
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <img src="logo.svg" width="22" height="22" alt="CAD Logo"/>
+      <div>
+        <div class="page-header-firm">Cipta Ananta Dharma</div>
+        <div class="page-header-sub">Engineering Services</div>
+      </div>
+    </div>
+    <div class="page-header-title">Selected Projects</div>
+  </div>
+
+  <div class="page-body">
+    <div class="section-eyebrow">Our Work</div>
+    <div class="section-title">Projects that speak<br/><span>for themselves.</span></div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-img">
+          <img src="project1.jpg" style="width:100%;height:100%;object-fit:contain;display:block;" alt="Project 1"/>
+        </div>
+        <div class="project-info">
+          <div class="project-type">Commercial · Industrial</div>
+          <div class="project-name">Net Factory - Semarang </div>
+          <div class="project-desc">1-4-storey reinforced concrete and steel frame structure. Full ETABS model, seismic design to SNI 2847:2019.</div>
+          <div class="project-meta">
+            <span class="project-meta-item">1-4 floors</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">20000 m²</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">2019</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img">
+          <img src="project2.jpg" style="width:100%;height:100%;object-fit:contain;display:block;" alt="Project 2"/>
+        </div>
+        <div class="project-info">
+          <div class="project-type">Commercial · Mixed-Use</div>
+          <div class="project-name">Hong Kong Student Housing — Hong Kong</div>
+          <div class="project-desc">Mid-rise concrete student housing. Structural design and documentations.</div>
+          <div class="project-meta">
+            <span class="project-meta-item">7-9floors</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">10000++ m²</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">2012</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img">
+          <img src="project3.jpg" style="width:100%;height:100%;object-fit:contain;display:block;" alt="Project 3"/>
+        </div>
+        <div class="project-info">
+          <div class="project-type">Commercial · Development</div>
+          <div class="project-name">Apartment - Jakarta</div>
+          <div class="project-desc">Multi Storey Apartment located near Jakarta Airport, all design and documentations done in house.</div>
+          <div class="project-meta">
+            <span class="project-meta-item">5+ floors</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">5000+ m²</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">2016</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img">
+          <img src="project4.jpg" style="width:100%;height:100%;object-fit:contain;display:block;" alt="Project 4"/>
+        </div>
+        <div class="project-info">
+          <div class="project-type">Industrial · Warehouse</div>
+          <div class="project-name">Fish Cold Storage - Pasuruan </div>
+          <div class="project-desc">Steel portal frame warehouse structure. Foundation design with suspended ground floor slab.</div>
+          <div class="project-meta">
+            <span class="project-meta-item">15000++ m²</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">Steel Frame</span>
+            <span class="project-meta-item">·</span>
+            <span class="project-meta-item">2023</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">PT Cipta Ananta Dharma Engineering Services · Confidential</div>
+    <div class="page-num">06 / 08</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 7 — EXPERTISE & STANDARDS
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <img src="logo.svg" width="22" height="22" alt="CAD Logo"/>
+      <div>
+        <div class="page-header-firm">Cipta Ananta Dharma</div>
+        <div class="page-header-sub">Engineering Services</div>
+      </div>
+    </div>
+    <div class="page-header-title">Expertise & Standards</div>
+  </div>
+
+  <div class="page-body">
+    <div class="section-eyebrow">Our Technical Foundation</div>
+    <div class="section-title">Depth of expertise.<br/><span>Rigour at every level.</span></div>
+
+    <p class="body-text">Our work is grounded in advanced structural engineering practice — combining deep technical knowledge with industry-leading software and full compliance with Indonesian and international design standards.</p>
+
+    <div style="margin-top:6mm;">
+      <div class="section-eyebrow" style="margin-bottom:3mm;">Design Standards</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4mm;">
+        <div style="background:var(--navy-dark);border-radius:3mm;padding:5mm 6mm;">
+          <div style="font-size:8pt;font-weight:800;color:var(--gold);letter-spacing:0.04em;margin-bottom:1.5mm;">SNI</div>
+          <div style="font-size:6.5pt;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:2mm;">Standar Nasional Indonesia</div>
+          <div style="font-size:7.5pt;color:rgba(255,255,255,0.7);line-height:1.6;">Indonesia's national framework for structural design — covering concrete, steel, loading, and seismic requirements for all buildings constructed in Indonesia.</div>
+        </div>
+        <div style="background:var(--navy-dark);border-radius:3mm;padding:5mm 6mm;">
+          <div style="font-size:8pt;font-weight:800;color:var(--gold);letter-spacing:0.04em;margin-bottom:1.5mm;">AISC</div>
+          <div style="font-size:6.5pt;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:2mm;">American Institute of Steel Construction</div>
+          <div style="font-size:7.5pt;color:rgba(255,255,255,0.7);line-height:1.6;">The internationally recognised standard for structural steel design and construction — widely adopted across Asia and the Americas for its rigour and clarity.</div>
+        </div>
+        <div style="background:var(--navy-dark);border-radius:3mm;padding:5mm 6mm;">
+          <div style="font-size:8pt;font-weight:800;color:var(--gold);letter-spacing:0.04em;margin-bottom:1.5mm;">ACI</div>
+          <div style="font-size:6.5pt;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:2mm;">American Concrete Institute</div>
+          <div style="font-size:7.5pt;color:rgba(255,255,255,0.7);line-height:1.6;">The global benchmark for reinforced and prestressed concrete design — governing specification, detailing, and analysis of concrete structures worldwide.</div>
+        </div>
+        <div style="background:var(--navy-dark);border-radius:3mm;padding:5mm 6mm;">
+          <div style="font-size:8pt;font-weight:800;color:var(--gold);letter-spacing:0.04em;margin-bottom:1.5mm;">International Standards</div>
+          <div style="font-size:6.5pt;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:2mm;">Eurocode · British Standard · and more</div>
+          <div style="font-size:7.5pt;color:rgba(255,255,255,0.7);line-height:1.6;">We also work within Eurocode (EN) and British Standard (BS) frameworks — supporting international clients and projects that require multi-standard compliance.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:5mm;">
+      <div class="section-eyebrow" style="margin-bottom:3mm;">Software & Tools</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4mm;">
+        <div style="background:var(--off-white);border-radius:3mm;padding:5mm 6mm;border-left:1mm solid var(--navy);">
+          <div style="font-size:9pt;font-weight:700;color:var(--navy-dark);margin-bottom:2mm;">Structural Analysis Software</div>
+          <div style="font-size:8pt;color:var(--text-mid);line-height:1.6;">Industry-leading finite element modelling tools for building analysis, seismic assessment, load combinations, and member design verification.</div>
+        </div>
+        <div style="background:var(--off-white);border-radius:3mm;padding:5mm 6mm;border-left:1mm solid var(--navy);">
+          <div style="font-size:9pt;font-weight:700;color:var(--navy-dark);margin-bottom:2mm;">Python & Automation</div>
+          <div style="font-size:8pt;color:var(--text-mid);line-height:1.6;">Custom calculation scripts and automated PDF reporting tools — ensuring every output is traceable, repeatable, and professionally formatted.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:5mm;">
+      <div class="section-eyebrow" style="margin-bottom:3mm;">Technical Expertise</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;">
+        <div style="border:0.2mm solid var(--border);border-radius:3mm;padding:4mm 5mm;border-top:0.8mm solid var(--navy);">
+          <div style="font-size:8.5pt;font-weight:700;color:var(--navy-dark);margin-bottom:1.5mm;">Reinforced Concrete</div>
+          <div style="font-size:7.5pt;color:var(--text-mid);line-height:1.5;">Beams, columns, slabs, walls, and foundations to SNI & ACI standards.</div>
+        </div>
+        <div style="border:0.2mm solid var(--border);border-radius:3mm;padding:4mm 5mm;border-top:0.8mm solid var(--navy);">
+          <div style="font-size:8.5pt;font-weight:700;color:var(--navy-dark);margin-bottom:1.5mm;">Steel Structures</div>
+          <div style="font-size:7.5pt;color:var(--text-mid);line-height:1.5;">Portal frames, moment frames, and composite systems to AISC 360-22.</div>
+        </div>
+        <div style="border:0.2mm solid var(--border);border-radius:3mm;padding:4mm 5mm;border-top:0.8mm solid var(--navy);">
+          <div style="font-size:8.5pt;font-weight:700;color:var(--navy-dark);margin-bottom:1.5mm;">Seismic Design</div>
+          <div style="font-size:7.5pt;color:var(--text-mid);line-height:1.5;">Dynamic analysis, seismic hazard assessment, and ductile detailing.</div>
+        </div>
+        <div style="border:0.2mm solid var(--border);border-radius:3mm;padding:4mm 5mm;border-top:0.8mm solid var(--navy);">
+          <div style="font-size:8.5pt;font-weight:700;color:var(--navy-dark);margin-bottom:1.5mm;">Tall Building Systems</div>
+          <div style="font-size:7.5pt;color:var(--text-mid);line-height:1.5;">Outrigger-belt, core wall, and transfer slab for high-rise structures.</div>
+        </div>
+        <div style="border:0.2mm solid var(--border);border-radius:3mm;padding:4mm 5mm;border-top:0.8mm solid var(--navy);">
+          <div style="font-size:8.5pt;font-weight:700;color:var(--navy-dark);margin-bottom:1.5mm;">Foundation Design</div>
+          <div style="font-size:7.5pt;color:var(--text-mid);line-height:1.5;">Pile caps, mat foundations, and settlement analysis on varied soils.</div>
+        </div>
+        <div style="border:0.2mm solid var(--border);border-radius:3mm;padding:4mm 5mm;border-top:0.8mm solid var(--navy);">
+          <div style="font-size:8.5pt;font-weight:700;color:var(--navy-dark);margin-bottom:1.5mm;">Forensic Engineering</div>
+          <div style="font-size:7.5pt;color:var(--text-mid);line-height:1.5;">Investigation of structural distress, defects, and failure causes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">PT Cipta Ananta Dharma Engineering Services · Confidential</div>
+    <div class="page-num">07 / 08</div>
+  </div>
+</div>
+
+
+
+
+
+<!-- ════════════════════════════════════════
+     PAGE 8 — CONTACT / BACK COVER
+════════════════════════════════════════ -->
+<div class="page">
+  <div class="contact-page">
+    <svg class="contact-bg-pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+      <rect width="100%" height="100%" fill="url(#dot-pat)"/>
+    </svg>
+
+    <div class="contact-top">
+      <img src="logo.svg" width="44" height="44" alt="CAD Logo"/>
+      <div class="contact-top-text">
+        <div class="contact-page-eyebrow">Get In Touch</div>
+        <div class="contact-page-title">Let's build<br/>something great.</div>
+      </div>
+    </div>
+
+    <div class="contact-body">
+      <div>
+        <div class="contact-block-title">Contact Details</div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Phone</div>
+          <div class="contact-detail-value">+62 851 0280 1168</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value">ca.dharma@outlook.com</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Website</div>
+          <div class="contact-detail-value">www.cadharma.netlify.app</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-block-title">Office Location</div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Address</div>
+          <div class="contact-detail-value">Jl. Daan Mogot Km 18. Gg Rasiko Blok D15<br/>Jakarta Barat , DKI Jakarta<br/>Indonesia 15122</div>
+        </div>
+        <div style="margin-top:4mm;border-radius:3mm;overflow:hidden;">
+          <img src="map.png" style="width:100%;display:block;" alt="Office Location Map"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-bottom">
+      <div>
+        <div class="contact-bottom-firm">PT Cipta Ananta Dharma Engineering Services</div>
+        <div class="contact-bottom-sub">Jakarta · Indonesia · Est. 2026</div>
+      </div>
+      <div class="contact-tagline">Structure · Precision · Integrity</div>
+    </div>
+
+    <div class="contact-gold-bar"></div>
+  </div>
+</div>
+
+</body>
+</html>
